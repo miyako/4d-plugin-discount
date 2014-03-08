@@ -229,6 +229,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -273,11 +275,11 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>46</integer>
+									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 383}, {201, 445}}</string>
+							<string>{{0, 0}, {201, 445}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -296,7 +298,7 @@
 							<real>201</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>54 342 788 504 0 0 1440 878 </string>
+						<string>324 282 788 504 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -325,7 +327,6 @@
 										<array>
 											<string>D128CC791811A02C00D82E92</string>
 											<string>D1F05ED11811E19800B6ECDF</string>
-											<string>D175122F181244E000860B9F</string>
 											<string>D1751231181244E000860B9F</string>
 											<string>D1751232181244E000860B9F</string>
 											<string>D1751233181244E000860B9F</string>
@@ -350,18 +351,16 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {580, 209}}</string>
+								<string>{{0, 0}, {580, 186}}</string>
 								<key>RubberWindowFrame</key>
-								<string>54 342 788 504 0 0 1440 878 </string>
+								<string>324 282 788 504 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>209pt</string>
+							<string>186pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -372,14 +371,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 214}, {580, 249}}</string>
+								<string>{{0, 191}, {580, 272}}</string>
 								<key>RubberWindowFrame</key>
-								<string>54 342 788 504 0 0 1440 878 </string>
+								<string>324 282 788 504 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>249pt</string>
+							<string>272pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -398,9 +397,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>D13367B5181286A5004EE0FF</string>
+				<string>D13A2AD31843443B00E722A3</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>D13367B6181286A5004EE0FF</string>
+				<string>D13A2AD41843443B00E722A3</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -539,10 +538,12 @@
 	<key>WindowOrderList</key>
 	<array>
 		<string>D128CC721811A00700D82E92</string>
-		<string>/Users/miyako/Desktop/Discount/Discount.xcodeproj</string>
+		<string>D1DBACD71814E3DF002E45EB</string>
+		<string>D1DBACDB1814E3DF002E45EB</string>
+		<string>/Users/miyako/github-miyako/4d-plugin-discount/Discount/Discount.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>54 342 788 504 0 0 1440 878 </string>
+	<string>324 282 788 504 0 0 1440 878 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -619,7 +620,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>D128CC721811A00700D82E92</string>
-				<string>D13367B7181286A5004EE0FF</string>
+				<string>D13A2AD51843443B00E722A3</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

@@ -20,7 +20,7 @@
 				PBXFileTableDataSourceColumnWidthsKey = (
 					200,
 					200,
-					166.08349609375,
+					166,
 				);
 				PBXFileTableDataSourceColumnsKey = (
 					PBXBookmarksDataSource_LocationID,
@@ -98,12 +98,11 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 403867289;
-			PBXWorkspaceStateSaveDate = 403867289;
+			PBXPerProjectTemplateStateSaveDate = 407061552;
+			PBXWorkspaceStateSaveDate = 407061552;
 		};
 		perUserProjectItems = {
 			D128CC791811A02C00D82E92 /* PlistBookmark */ = D128CC791811A02C00D82E92 /* PlistBookmark */;
-			D175122F181244E000860B9F /* PBXTextBookmark */ = D175122F181244E000860B9F /* PBXTextBookmark */;
 			D1751231181244E000860B9F /* PBXTextBookmark */ = D1751231181244E000860B9F /* PBXTextBookmark */;
 			D1751232181244E000860B9F /* PBXTextBookmark */ = D1751232181244E000860B9F /* PBXTextBookmark */;
 			D1751233181244E000860B9F /* PBXTextBookmark */ = D1751233181244E000860B9F /* PBXTextBookmark */;
@@ -133,9 +132,9 @@
 	18B684FE06944F8800CC6A1E /* 4DPlugin.cpp */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {817, 1248}}";
-			sepNavSelRange = "{1814, 0}";
-			sepNavVisRange = "{1063, 1086}";
-			sepNavWindowFrame = "{{0, 47}, {876, 725}}";
+			sepNavSelRange = "{1185, 47}";
+			sepNavVisRange = "{964, 1086}";
+			sepNavWindowFrame = "{{564, 44}, {876, 725}}";
 		};
 	};
 	8D01CCC60486CAD60068D4B7 /* Discount */ = {
@@ -180,23 +179,6 @@
 			sepNavVisRange = "{671, 510}";
 			sepNavWindowFrame = "{{418, 191}, {875, 582}}";
 		};
-	};
-	D175122F181244E000860B9F /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D1751230181244E000860B9F /* main.c */;
-		name = "main.c: 3";
-		rLen = 1;
-		rLoc = 64;
-		rType = 0;
-		vrLen = 362;
-		vrLoc = 0;
-	};
-	D1751230181244E000860B9F /* main.c */ = {
-		isa = PBXFileReference;
-		lastKnownFileType = sourcecode.c.c;
-		name = main.c;
-		path = /Users/miyako/Desktop/Discount/discount/main.c;
-		sourceTree = "<absolute>";
 	};
 	D1751231181244E000860B9F /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -488,9 +470,9 @@
 	};
 	D1F05DDC1811D8B100B6ECDF /* github_flavoured.c */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {816, 1287}}";
-			sepNavSelRange = "{1487, 0}";
-			sepNavVisRange = "{1117, 823}";
+			sepNavIntBoundsRect = "{{0, 0}, {816, 1365}}";
+			sepNavSelRange = "{1833, 50}";
+			sepNavVisRange = "{1454, 743}";
 			sepNavWindowFrame = "{{268, 60}, {875, 582}}";
 		};
 	};
