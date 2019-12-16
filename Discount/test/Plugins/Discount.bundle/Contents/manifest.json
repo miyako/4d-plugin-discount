@@ -1,0 +1,11 @@
+{
+    "name": "Discount",
+    "id": 20000,
+    "commands": [
+        {
+            "theme": "Discount",
+            "syntax": "Markdown(&T;&T;&L;&L):L",
+            "threadSafe": true
+        }
+    ]
+}

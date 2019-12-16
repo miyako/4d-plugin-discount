@@ -3,154 +3,100 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 42;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		18B684F506944F2000CC6A1E /* 4DPluginAPI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B684EE06944F2000CC6A1E /* 4DPluginAPI.cpp */; };
 		18B684F706944F2000CC6A1E /* 4DPluginAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 18B684F006944F2000CC6A1E /* 4DPluginAPI.h */; };
 		18B684F806944F2000CC6A1E /* EntryPoints.h in Headers */ = {isa = PBXBuildFile; fileRef = 18B684F106944F2000CC6A1E /* EntryPoints.h */; };
 		18B684F906944F2000CC6A1E /* Flags.h in Headers */ = {isa = PBXBuildFile; fileRef = 18B684F206944F2000CC6A1E /* Flags.h */; };
 		18B684FA06944F2000CC6A1E /* PrivateTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 18B684F306944F2000CC6A1E /* PrivateTypes.h */; };
 		18B684FB06944F2000CC6A1E /* PublicTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 18B684F406944F2000CC6A1E /* PublicTypes.h */; };
-		18B684FF06944F8800CC6A1E /* 4DPlugin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B684FE06944F8800CC6A1E /* 4DPlugin.cpp */; };
-		18B685230694531300CC6A1E /* 4DPlugin.rsrc in Rez */ = {isa = PBXBuildFile; fileRef = 18B685220694531300CC6A1E /* 4DPlugin.rsrc */; };
-		8D01CCC80486CAD60068D4B7 /* 4D Plugin_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 32BAE0B30371A71500C91783 /* 4D Plugin_Prefix.pch */; };
+		18B684FF06944F8800CC6A1E /* 4DPlugin-Discount.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18B684FE06944F8800CC6A1E /* 4DPlugin-Discount.cpp */; };
 		8D01CCCA0486CAD60068D4B7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
-		8D01CCCE0486CAD60068D4B7 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08EA7FFBFE8413EDC02AAC07 /* Carbon.framework */; };
-		D10DD2C4135FA56100319781 /* C_TIME.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D10DD2C2135FA56100319781 /* C_TIME.cpp */; };
-		D10DD2C5135FA56100319781 /* C_TIME.h in Headers */ = {isa = PBXBuildFile; fileRef = D10DD2C3135FA56100319781 /* C_TIME.h */; };
-		D10DD2EB135FAB2F00319781 /* C_DATE.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D10DD2E9135FAB2F00319781 /* C_DATE.cpp */; };
-		D10DD2EC135FAB2F00319781 /* C_DATE.h in Headers */ = {isa = PBXBuildFile; fileRef = D10DD2EA135FAB2F00319781 /* C_DATE.h */; };
-		D120937F13534DCC00A72CAA /* 4DPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = D120937E13534DCC00A72CAA /* 4DPlugin.h */; };
+		D120937F13534DCC00A72CAA /* 4DPlugin-Discount.h in Headers */ = {isa = PBXBuildFile; fileRef = D120937E13534DCC00A72CAA /* 4DPlugin-Discount.h */; };
 		D130064F12F02D9700702C0E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D130064E12F02D9700702C0E /* Cocoa.framework */; };
-		D1392DD513582164004911A5 /* C_PICTURE.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1392DD313582164004911A5 /* C_PICTURE.cpp */; };
-		D1392DD613582164004911A5 /* C_PICTURE.h in Headers */ = {isa = PBXBuildFile; fileRef = D1392DD413582164004911A5 /* C_PICTURE.h */; };
-		D1392DD913582171004911A5 /* C_BLOB.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1392DD713582171004911A5 /* C_BLOB.cpp */; };
-		D1392DDA13582171004911A5 /* C_BLOB.h in Headers */ = {isa = PBXBuildFile; fileRef = D1392DD813582171004911A5 /* C_BLOB.h */; };
-		D13E88A013543F3800C1F956 /* ARRAY_REAL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D13E889E13543F3800C1F956 /* ARRAY_REAL.cpp */; };
-		D13E88A113543F3800C1F956 /* ARRAY_REAL.h in Headers */ = {isa = PBXBuildFile; fileRef = D13E889F13543F3800C1F956 /* ARRAY_REAL.h */; };
-		D16AC3AA147CB499000AA750 /* ARRAY_BOOLEAN.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D16AC3A8147CB499000AA750 /* ARRAY_BOOLEAN.cpp */; };
-		D16AC3AB147CB499000AA750 /* ARRAY_BOOLEAN.h in Headers */ = {isa = PBXBuildFile; fileRef = D16AC3A9147CB499000AA750 /* ARRAY_BOOLEAN.h */; };
-		D17511D81812183100860B9F /* resource.h in Headers */ = {isa = PBXBuildFile; fileRef = D17511D71812183100860B9F /* resource.h */; };
-		D17513691812556400860B9F /* toc.h in Headers */ = {isa = PBXBuildFile; fileRef = D17513681812556400860B9F /* toc.h */; };
-		D17513911812565600860B9F /* css.h in Headers */ = {isa = PBXBuildFile; fileRef = D17513901812565600860B9F /* css.h */; };
-		D19271A51353D6F2001CEA07 /* ARRAY_TEXT.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D19271A31353D6F2001CEA07 /* ARRAY_TEXT.cpp */; };
-		D19271A61353D6F2001CEA07 /* ARRAY_TEXT.h in Headers */ = {isa = PBXBuildFile; fileRef = D19271A41353D6F2001CEA07 /* ARRAY_TEXT.h */; };
-		D19271AA1353D771001CEA07 /* ARRAY_LONGINT.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D19271A81353D771001CEA07 /* ARRAY_LONGINT.cpp */; };
-		D19271AB1353D771001CEA07 /* ARRAY_LONGINT.h in Headers */ = {isa = PBXBuildFile; fileRef = D19271A91353D771001CEA07 /* ARRAY_LONGINT.h */; };
-		D19271CD1353DE6E001CEA07 /* ARRAY_INTEGER.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D19271CB1353DE6E001CEA07 /* ARRAY_INTEGER.cpp */; };
-		D19271CE1353DE6E001CEA07 /* ARRAY_INTEGER.h in Headers */ = {isa = PBXBuildFile; fileRef = D19271CC1353DE6E001CEA07 /* ARRAY_INTEGER.h */; };
-		D19CC17E1353782E0004336E /* C_INTEGER.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D19CC1761353782E0004336E /* C_INTEGER.cpp */; };
-		D19CC17F1353782E0004336E /* C_INTEGER.h in Headers */ = {isa = PBXBuildFile; fileRef = D19CC1771353782E0004336E /* C_INTEGER.h */; };
-		D19CC1801353782E0004336E /* C_LONGINT.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D19CC1781353782E0004336E /* C_LONGINT.cpp */; };
-		D19CC1811353782E0004336E /* C_LONGINT.h in Headers */ = {isa = PBXBuildFile; fileRef = D19CC1791353782E0004336E /* C_LONGINT.h */; };
-		D19CC1821353782E0004336E /* C_REAL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D19CC17A1353782E0004336E /* C_REAL.cpp */; };
-		D19CC1831353782E0004336E /* C_REAL.h in Headers */ = {isa = PBXBuildFile; fileRef = D19CC17B1353782E0004336E /* C_REAL.h */; };
-		D19CC1841353782E0004336E /* C_TEXT.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D19CC17C1353782E0004336E /* C_TEXT.cpp */; };
-		D19CC1851353782E0004336E /* C_TEXT.h in Headers */ = {isa = PBXBuildFile; fileRef = D19CC17D1353782E0004336E /* C_TEXT.h */; };
-		D1F05DF11811D8B100B6ECDF /* amalloc.c in Sources */ = {isa = PBXBuildFile; fileRef = D1F05DCF1811D8B100B6ECDF /* amalloc.c */; };
-		D1F05DF21811D8B100B6ECDF /* amalloc.h in Headers */ = {isa = PBXBuildFile; fileRef = D1F05DD01811D8B100B6ECDF /* amalloc.h */; };
-		D1F05DF51811D8B100B6ECDF /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = D1F05DD31811D8B100B6ECDF /* config.h */; };
-		D1F05DF61811D8B100B6ECDF /* Csio.c in Sources */ = {isa = PBXBuildFile; fileRef = D1F05DD41811D8B100B6ECDF /* Csio.c */; };
-		D1F05DF71811D8B100B6ECDF /* css.c in Sources */ = {isa = PBXBuildFile; fileRef = D1F05DD51811D8B100B6ECDF /* css.c */; };
-		D1F05DF81811D8B100B6ECDF /* cstring.h in Headers */ = {isa = PBXBuildFile; fileRef = D1F05DD61811D8B100B6ECDF /* cstring.h */; };
-		D1F05DF91811D8B100B6ECDF /* docheader.c in Sources */ = {isa = PBXBuildFile; fileRef = D1F05DD71811D8B100B6ECDF /* docheader.c */; };
-		D1F05DFA1811D8B100B6ECDF /* dumptree.c in Sources */ = {isa = PBXBuildFile; fileRef = D1F05DD81811D8B100B6ECDF /* dumptree.c */; };
-		D1F05DFB1811D8B100B6ECDF /* emmatch.c in Sources */ = {isa = PBXBuildFile; fileRef = D1F05DD91811D8B100B6ECDF /* emmatch.c */; };
-		D1F05DFC1811D8B100B6ECDF /* flags.c in Sources */ = {isa = PBXBuildFile; fileRef = D1F05DDA1811D8B100B6ECDF /* flags.c */; };
-		D1F05DFD1811D8B100B6ECDF /* generate.c in Sources */ = {isa = PBXBuildFile; fileRef = D1F05DDB1811D8B100B6ECDF /* generate.c */; };
-		D1F05DFE1811D8B100B6ECDF /* github_flavoured.c in Sources */ = {isa = PBXBuildFile; fileRef = D1F05DDC1811D8B100B6ECDF /* github_flavoured.c */; };
-		D1F05DFF1811D8B100B6ECDF /* html5.c in Sources */ = {isa = PBXBuildFile; fileRef = D1F05DDD1811D8B100B6ECDF /* html5.c */; };
-		D1F05E031811D8B100B6ECDF /* markdown.h in Headers */ = {isa = PBXBuildFile; fileRef = D1F05DE11811D8B100B6ECDF /* markdown.h */; };
-		D1F05E051811D8B100B6ECDF /* mkdio.c in Sources */ = {isa = PBXBuildFile; fileRef = D1F05DE31811D8B100B6ECDF /* mkdio.c */; };
-		D1F05E061811D8B100B6ECDF /* mkdio.h in Headers */ = {isa = PBXBuildFile; fileRef = D1F05DE41811D8B100B6ECDF /* mkdio.h */; };
-		D1F05E071811D8B100B6ECDF /* mktags.c in Sources */ = {isa = PBXBuildFile; fileRef = D1F05DE51811D8B100B6ECDF /* mktags.c */; };
-		D1F05E081811D8B100B6ECDF /* pgm_options.c in Sources */ = {isa = PBXBuildFile; fileRef = D1F05DE61811D8B100B6ECDF /* pgm_options.c */; };
-		D1F05E091811D8B100B6ECDF /* pgm_options.h in Headers */ = {isa = PBXBuildFile; fileRef = D1F05DE71811D8B100B6ECDF /* pgm_options.h */; };
-		D1F05E0A1811D8B100B6ECDF /* resource.c in Sources */ = {isa = PBXBuildFile; fileRef = D1F05DE81811D8B100B6ECDF /* resource.c */; };
-		D1F05E0B1811D8B100B6ECDF /* setup.c in Sources */ = {isa = PBXBuildFile; fileRef = D1F05DE91811D8B100B6ECDF /* setup.c */; };
-		D1F05E0C1811D8B100B6ECDF /* tags.c in Sources */ = {isa = PBXBuildFile; fileRef = D1F05DEA1811D8B100B6ECDF /* tags.c */; };
-		D1F05E0D1811D8B100B6ECDF /* tags.h in Headers */ = {isa = PBXBuildFile; fileRef = D1F05DEB1811D8B100B6ECDF /* tags.h */; };
-		D1F05E0F1811D8B100B6ECDF /* toc.c in Sources */ = {isa = PBXBuildFile; fileRef = D1F05DED1811D8B100B6ECDF /* toc.c */; };
-		D1F05E111811D8B100B6ECDF /* xml.c in Sources */ = {isa = PBXBuildFile; fileRef = D1F05DEF1811D8B100B6ECDF /* xml.c */; };
-		D1F05E121811D8B100B6ECDF /* xmlpage.c in Sources */ = {isa = PBXBuildFile; fileRef = D1F05DF01811D8B100B6ECDF /* xmlpage.c */; };
-		D1F05F871811E70F00B6ECDF /* markdown.c in Sources */ = {isa = PBXBuildFile; fileRef = D1F05F861811E70F00B6ECDF /* markdown.c */; };
+		D13116A91A03ACB700DE1322 /* 4DPluginAPI.c in Sources */ = {isa = PBXBuildFile; fileRef = D13116A81A03ACB700DE1322 /* 4DPluginAPI.c */; settings = {COMPILER_FLAGS = "-Wno-multichar"; }; };
+		D134D4AC1A030BA0008D14EF /* manifest.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = D134D4A91A030B06008D14EF /* manifest.json */; };
+		D1C1F73623A724020043810F /* C_LONGINT.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1C1F73123A724020043810F /* C_LONGINT.cpp */; };
+		D1C1F73723A724020043810F /* C_LONGINT.h in Headers */ = {isa = PBXBuildFile; fileRef = D1C1F73223A724020043810F /* C_LONGINT.h */; };
+		D1C1F73823A724020043810F /* C_TEXT.h in Headers */ = {isa = PBXBuildFile; fileRef = D1C1F73323A724020043810F /* C_TEXT.h */; };
+		D1C1F73923A724020043810F /* C_TYPES.h in Headers */ = {isa = PBXBuildFile; fileRef = D1C1F73423A724020043810F /* C_TYPES.h */; };
+		D1C1F73A23A724020043810F /* C_TEXT.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1C1F73523A724020043810F /* C_TEXT.cpp */; };
+		D1F2267B23A72780009B96D8 /* amalloc.c in Sources */ = {isa = PBXBuildFile; fileRef = D1F2267923A72780009B96D8 /* amalloc.c */; };
+		D1F2267D23A72797009B96D8 /* Csio.c in Sources */ = {isa = PBXBuildFile; fileRef = D1F2267C23A72797009B96D8 /* Csio.c */; };
+		D1F2267F23A7279B009B96D8 /* css.c in Sources */ = {isa = PBXBuildFile; fileRef = D1F2267E23A7279B009B96D8 /* css.c */; };
+		D1F2268123A727A0009B96D8 /* docheader.c in Sources */ = {isa = PBXBuildFile; fileRef = D1F2268023A727A0009B96D8 /* docheader.c */; };
+		D1F2268323A727A5009B96D8 /* dumptree.c in Sources */ = {isa = PBXBuildFile; fileRef = D1F2268223A727A5009B96D8 /* dumptree.c */; };
+		D1F2268523A727AA009B96D8 /* emmatch.c in Sources */ = {isa = PBXBuildFile; fileRef = D1F2268423A727AA009B96D8 /* emmatch.c */; };
+		D1F2268723A727AF009B96D8 /* flags.c in Sources */ = {isa = PBXBuildFile; fileRef = D1F2268623A727AF009B96D8 /* flags.c */; };
+		D1F2268923A727B3009B96D8 /* generate.c in Sources */ = {isa = PBXBuildFile; fileRef = D1F2268823A727B3009B96D8 /* generate.c */; };
+		D1F2268B23A727B7009B96D8 /* github_flavoured.c in Sources */ = {isa = PBXBuildFile; fileRef = D1F2268A23A727B7009B96D8 /* github_flavoured.c */; };
+		D1F2268D23A727BE009B96D8 /* html5.c in Sources */ = {isa = PBXBuildFile; fileRef = D1F2268C23A727BE009B96D8 /* html5.c */; };
+		D1F2269123A727C8009B96D8 /* mkdio.c in Sources */ = {isa = PBXBuildFile; fileRef = D1F2269023A727C7009B96D8 /* mkdio.c */; };
+		D1F2269323A727CC009B96D8 /* pgm_options.c in Sources */ = {isa = PBXBuildFile; fileRef = D1F2269223A727CC009B96D8 /* pgm_options.c */; };
+		D1F2269523A727D0009B96D8 /* resource.c in Sources */ = {isa = PBXBuildFile; fileRef = D1F2269423A727D0009B96D8 /* resource.c */; };
+		D1F2269723A727D5009B96D8 /* setup.c in Sources */ = {isa = PBXBuildFile; fileRef = D1F2269623A727D5009B96D8 /* setup.c */; };
+		D1F2269923A727DA009B96D8 /* tags.c in Sources */ = {isa = PBXBuildFile; fileRef = D1F2269823A727DA009B96D8 /* tags.c */; };
+		D1F2269B23A727E0009B96D8 /* toc.c in Sources */ = {isa = PBXBuildFile; fileRef = D1F2269A23A727E0009B96D8 /* toc.c */; };
+		D1F2269D23A727E4009B96D8 /* xml.c in Sources */ = {isa = PBXBuildFile; fileRef = D1F2269C23A727E4009B96D8 /* xml.c */; };
+		D1F2269F23A727E9009B96D8 /* xmlpage.c in Sources */ = {isa = PBXBuildFile; fileRef = D1F2269E23A727E9009B96D8 /* xmlpage.c */; };
+		D1F226A123A72817009B96D8 /* markdown.c in Sources */ = {isa = PBXBuildFile; fileRef = D1F226A023A72817009B96D8 /* markdown.c */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D134D4AB1A030B7A008D14EF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = ..;
+			dstSubfolderSpec = 7;
+			files = (
+				D134D4AC1A030BA0008D14EF /* manifest.json in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		08EA7FFBFE8413EDC02AAC07 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		189286350695AD8900B05D6E /* Discount.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Discount.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		18B684EE06944F2000CC6A1E /* 4DPluginAPI.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; path = 4DPluginAPI.cpp; sourceTree = "<group>"; };
 		18B684F006944F2000CC6A1E /* 4DPluginAPI.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = 4DPluginAPI.h; sourceTree = "<group>"; };
 		18B684F106944F2000CC6A1E /* EntryPoints.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = EntryPoints.h; sourceTree = "<group>"; };
 		18B684F206944F2000CC6A1E /* Flags.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Flags.h; sourceTree = "<group>"; };
 		18B684F306944F2000CC6A1E /* PrivateTypes.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = PrivateTypes.h; sourceTree = "<group>"; };
 		18B684F406944F2000CC6A1E /* PublicTypes.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = PublicTypes.h; sourceTree = "<group>"; };
-		18B684FE06944F8800CC6A1E /* 4DPlugin.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; path = 4DPlugin.cpp; sourceTree = "<group>"; };
-		18B685220694531300CC6A1E /* 4DPlugin.rsrc */ = {isa = PBXFileReference; lastKnownFileType = archive.rsrc; path = 4DPlugin.rsrc; sourceTree = "<group>"; };
-		32BAE0B30371A71500C91783 /* 4D Plugin_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "4D Plugin_Prefix.pch"; sourceTree = "<group>"; };
+		18B684FE06944F8800CC6A1E /* 4DPlugin-Discount.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; path = "4DPlugin-Discount.cpp"; sourceTree = "<group>"; };
 		8D01CCD10486CAD60068D4B7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		D10DD2C2135FA56100319781 /* C_TIME.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = C_TIME.cpp; path = Classes/C_TIME.cpp; sourceTree = "<group>"; };
-		D10DD2C3135FA56100319781 /* C_TIME.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C_TIME.h; path = Classes/C_TIME.h; sourceTree = "<group>"; };
-		D10DD2E9135FAB2F00319781 /* C_DATE.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = C_DATE.cpp; path = Classes/C_DATE.cpp; sourceTree = "<group>"; };
-		D10DD2EA135FAB2F00319781 /* C_DATE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C_DATE.h; path = Classes/C_DATE.h; sourceTree = "<group>"; };
-		D120937E13534DCC00A72CAA /* 4DPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 4DPlugin.h; sourceTree = "<group>"; };
+		D120937E13534DCC00A72CAA /* 4DPlugin-Discount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "4DPlugin-Discount.h"; sourceTree = "<group>"; };
 		D130064E12F02D9700702C0E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		D1392DD313582164004911A5 /* C_PICTURE.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = C_PICTURE.cpp; path = Classes/C_PICTURE.cpp; sourceTree = "<group>"; };
-		D1392DD413582164004911A5 /* C_PICTURE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C_PICTURE.h; path = Classes/C_PICTURE.h; sourceTree = "<group>"; };
-		D1392DD713582171004911A5 /* C_BLOB.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = C_BLOB.cpp; path = Classes/C_BLOB.cpp; sourceTree = "<group>"; };
-		D1392DD813582171004911A5 /* C_BLOB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C_BLOB.h; path = Classes/C_BLOB.h; sourceTree = "<group>"; };
-		D13E889E13543F3800C1F956 /* ARRAY_REAL.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = ARRAY_REAL.cpp; path = Classes/ARRAY_REAL.cpp; sourceTree = "<group>"; };
-		D13E889F13543F3800C1F956 /* ARRAY_REAL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARRAY_REAL.h; path = Classes/ARRAY_REAL.h; sourceTree = "<group>"; };
-		D16AC3A8147CB499000AA750 /* ARRAY_BOOLEAN.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = ARRAY_BOOLEAN.cpp; path = Classes/ARRAY_BOOLEAN.cpp; sourceTree = "<group>"; };
-		D16AC3A9147CB499000AA750 /* ARRAY_BOOLEAN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARRAY_BOOLEAN.h; path = Classes/ARRAY_BOOLEAN.h; sourceTree = "<group>"; };
-		D17511D71812183100860B9F /* resource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = resource.h; sourceTree = "<group>"; };
-		D17513681812556400860B9F /* toc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = toc.h; sourceTree = "<group>"; };
-		D17513901812565600860B9F /* css.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = css.h; sourceTree = "<group>"; };
-		D19271A31353D6F2001CEA07 /* ARRAY_TEXT.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = ARRAY_TEXT.cpp; path = Classes/ARRAY_TEXT.cpp; sourceTree = "<group>"; };
-		D19271A41353D6F2001CEA07 /* ARRAY_TEXT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARRAY_TEXT.h; path = Classes/ARRAY_TEXT.h; sourceTree = "<group>"; };
-		D19271A81353D771001CEA07 /* ARRAY_LONGINT.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = ARRAY_LONGINT.cpp; path = Classes/ARRAY_LONGINT.cpp; sourceTree = "<group>"; };
-		D19271A91353D771001CEA07 /* ARRAY_LONGINT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARRAY_LONGINT.h; path = Classes/ARRAY_LONGINT.h; sourceTree = "<group>"; };
-		D19271CB1353DE6E001CEA07 /* ARRAY_INTEGER.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = ARRAY_INTEGER.cpp; path = Classes/ARRAY_INTEGER.cpp; sourceTree = "<group>"; };
-		D19271CC1353DE6E001CEA07 /* ARRAY_INTEGER.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARRAY_INTEGER.h; path = Classes/ARRAY_INTEGER.h; sourceTree = "<group>"; };
-		D19CC1761353782E0004336E /* C_INTEGER.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = C_INTEGER.cpp; path = classes/C_INTEGER.cpp; sourceTree = "<group>"; };
-		D19CC1771353782E0004336E /* C_INTEGER.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C_INTEGER.h; path = classes/C_INTEGER.h; sourceTree = "<group>"; };
-		D19CC1781353782E0004336E /* C_LONGINT.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = C_LONGINT.cpp; path = classes/C_LONGINT.cpp; sourceTree = "<group>"; };
-		D19CC1791353782E0004336E /* C_LONGINT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C_LONGINT.h; path = classes/C_LONGINT.h; sourceTree = "<group>"; };
-		D19CC17A1353782E0004336E /* C_REAL.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = C_REAL.cpp; path = classes/C_REAL.cpp; sourceTree = "<group>"; };
-		D19CC17B1353782E0004336E /* C_REAL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C_REAL.h; path = classes/C_REAL.h; sourceTree = "<group>"; };
-		D19CC17C1353782E0004336E /* C_TEXT.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = C_TEXT.cpp; path = classes/C_TEXT.cpp; sourceTree = "<group>"; };
-		D19CC17D1353782E0004336E /* C_TEXT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C_TEXT.h; path = classes/C_TEXT.h; sourceTree = "<group>"; };
-		D1F05DCF1811D8B100B6ECDF /* amalloc.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = amalloc.c; sourceTree = "<group>"; };
-		D1F05DD01811D8B100B6ECDF /* amalloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = amalloc.h; sourceTree = "<group>"; };
-		D1F05DD21811D8B100B6ECDF /* blocktags */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = blocktags; sourceTree = "<group>"; };
-		D1F05DD31811D8B100B6ECDF /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
-		D1F05DD41811D8B100B6ECDF /* Csio.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = Csio.c; sourceTree = "<group>"; };
-		D1F05DD51811D8B100B6ECDF /* css.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = css.c; sourceTree = "<group>"; };
-		D1F05DD61811D8B100B6ECDF /* cstring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cstring.h; sourceTree = "<group>"; };
-		D1F05DD71811D8B100B6ECDF /* docheader.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = docheader.c; sourceTree = "<group>"; };
-		D1F05DD81811D8B100B6ECDF /* dumptree.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = dumptree.c; sourceTree = "<group>"; };
-		D1F05DD91811D8B100B6ECDF /* emmatch.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = emmatch.c; sourceTree = "<group>"; };
-		D1F05DDA1811D8B100B6ECDF /* flags.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = flags.c; sourceTree = "<group>"; };
-		D1F05DDB1811D8B100B6ECDF /* generate.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = generate.c; sourceTree = "<group>"; };
-		D1F05DDC1811D8B100B6ECDF /* github_flavoured.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = github_flavoured.c; sourceTree = "<group>"; };
-		D1F05DDD1811D8B100B6ECDF /* html5.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = html5.c; sourceTree = "<group>"; };
-		D1F05DE11811D8B100B6ECDF /* markdown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = markdown.h; sourceTree = "<group>"; };
-		D1F05DE31811D8B100B6ECDF /* mkdio.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = mkdio.c; sourceTree = "<group>"; };
-		D1F05DE41811D8B100B6ECDF /* mkdio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mkdio.h; sourceTree = "<group>"; };
-		D1F05DE51811D8B100B6ECDF /* mktags.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = mktags.c; sourceTree = "<group>"; };
-		D1F05DE61811D8B100B6ECDF /* pgm_options.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = pgm_options.c; sourceTree = "<group>"; };
-		D1F05DE71811D8B100B6ECDF /* pgm_options.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pgm_options.h; sourceTree = "<group>"; };
-		D1F05DE81811D8B100B6ECDF /* resource.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = resource.c; sourceTree = "<group>"; };
-		D1F05DE91811D8B100B6ECDF /* setup.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = setup.c; sourceTree = "<group>"; };
-		D1F05DEA1811D8B100B6ECDF /* tags.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = tags.c; sourceTree = "<group>"; };
-		D1F05DEB1811D8B100B6ECDF /* tags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tags.h; sourceTree = "<group>"; };
-		D1F05DED1811D8B100B6ECDF /* toc.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = toc.c; sourceTree = "<group>"; };
-		D1F05DEF1811D8B100B6ECDF /* xml.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = xml.c; sourceTree = "<group>"; };
-		D1F05DF01811D8B100B6ECDF /* xmlpage.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = xmlpage.c; sourceTree = "<group>"; };
-		D1F05F861811E70F00B6ECDF /* markdown.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = markdown.c; sourceTree = "<group>"; };
+		D13116A81A03ACB700DE1322 /* 4DPluginAPI.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = 4DPluginAPI.c; sourceTree = "<group>"; };
+		D134D4A91A030B06008D14EF /* manifest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
+		D14D10DD1A03A8A5008B3411 /* constants.xlf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = constants.xlf; sourceTree = "<group>"; };
+		D1C1F73123A724020043810F /* C_LONGINT.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = C_LONGINT.cpp; path = "4D Plugin API/Classes/C_LONGINT.cpp"; sourceTree = "<group>"; };
+		D1C1F73223A724020043810F /* C_LONGINT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C_LONGINT.h; path = "4D Plugin API/Classes/C_LONGINT.h"; sourceTree = "<group>"; };
+		D1C1F73323A724020043810F /* C_TEXT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C_TEXT.h; path = "4D Plugin API/Classes/C_TEXT.h"; sourceTree = "<group>"; };
+		D1C1F73423A724020043810F /* C_TYPES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = C_TYPES.h; path = "4D Plugin API/Classes/C_TYPES.h"; sourceTree = "<group>"; };
+		D1C1F73523A724020043810F /* C_TEXT.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = C_TEXT.cpp; path = "4D Plugin API/Classes/C_TEXT.cpp"; sourceTree = "<group>"; };
+		D1C1F73B23A7253C0043810F /* libmarkdown.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmarkdown.a; path = a/libmarkdown.a; sourceTree = "<group>"; };
+		D1F2267923A72780009B96D8 /* amalloc.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = amalloc.c; path = discount/amalloc.c; sourceTree = SOURCE_ROOT; };
+		D1F2267C23A72797009B96D8 /* Csio.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = Csio.c; path = discount/Csio.c; sourceTree = SOURCE_ROOT; };
+		D1F2267E23A7279B009B96D8 /* css.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = css.c; path = discount/css.c; sourceTree = SOURCE_ROOT; };
+		D1F2268023A727A0009B96D8 /* docheader.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = docheader.c; path = discount/docheader.c; sourceTree = SOURCE_ROOT; };
+		D1F2268223A727A5009B96D8 /* dumptree.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = dumptree.c; path = discount/dumptree.c; sourceTree = SOURCE_ROOT; };
+		D1F2268423A727AA009B96D8 /* emmatch.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = emmatch.c; path = discount/emmatch.c; sourceTree = SOURCE_ROOT; };
+		D1F2268623A727AF009B96D8 /* flags.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = flags.c; path = discount/flags.c; sourceTree = SOURCE_ROOT; };
+		D1F2268823A727B3009B96D8 /* generate.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = generate.c; path = discount/generate.c; sourceTree = SOURCE_ROOT; };
+		D1F2268A23A727B7009B96D8 /* github_flavoured.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = github_flavoured.c; path = discount/github_flavoured.c; sourceTree = SOURCE_ROOT; };
+		D1F2268C23A727BE009B96D8 /* html5.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = html5.c; path = discount/html5.c; sourceTree = SOURCE_ROOT; };
+		D1F2269023A727C7009B96D8 /* mkdio.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = mkdio.c; path = discount/mkdio.c; sourceTree = SOURCE_ROOT; };
+		D1F2269223A727CC009B96D8 /* pgm_options.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = pgm_options.c; path = discount/pgm_options.c; sourceTree = SOURCE_ROOT; };
+		D1F2269423A727D0009B96D8 /* resource.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = resource.c; path = discount/resource.c; sourceTree = SOURCE_ROOT; };
+		D1F2269623A727D5009B96D8 /* setup.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = setup.c; path = discount/setup.c; sourceTree = SOURCE_ROOT; };
+		D1F2269823A727DA009B96D8 /* tags.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = tags.c; path = discount/tags.c; sourceTree = SOURCE_ROOT; };
+		D1F2269A23A727E0009B96D8 /* toc.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = toc.c; path = discount/toc.c; sourceTree = SOURCE_ROOT; };
+		D1F2269C23A727E4009B96D8 /* xml.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = xml.c; path = discount/xml.c; sourceTree = SOURCE_ROOT; };
+		D1F2269E23A727E9009B96D8 /* xmlpage.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = xmlpage.c; path = discount/xmlpage.c; sourceTree = SOURCE_ROOT; };
+		D1F226A023A72817009B96D8 /* markdown.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = markdown.c; path = discount/markdown.c; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,7 +104,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D01CCCE0486CAD60068D4B7 /* Carbon.framework in Frameworks */,
 				D130064F12F02D9700702C0E /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -166,22 +111,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		089C166AFE841209C02AAC07 /* 4D Plugin */ = {
+		089C166AFE841209C02AAC07 /* Discount */ = {
 			isa = PBXGroup;
 			children = (
-				D1F05DCE1811D8B100B6ECDF /* discount */,
+				D1F2267723A72762009B96D8 /* discount */,
+				D1C1F73123A724020043810F /* C_LONGINT.cpp */,
+				D1C1F73223A724020043810F /* C_LONGINT.h */,
+				D1C1F73523A724020043810F /* C_TEXT.cpp */,
+				D1C1F73323A724020043810F /* C_TEXT.h */,
+				D1C1F73423A724020043810F /* C_TYPES.h */,
+				D108BD7A1A03D1E6001F1B90 /* Manifest */,
 				08FB77ADFE841716C02AAC07 /* Source */,
 				089C167CFE841241C02AAC07 /* Resources */,
 				089C1671FE841209C02AAC07 /* External Frameworks and Libraries */,
 				189286360695AD8900B05D6E /* Products */,
+				D16FBB3C22A4C07E008F0416 /* Frameworks */,
 			);
-			name = "4D Plugin";
+			name = Discount;
 			sourceTree = "<group>";
 		};
 		089C1671FE841209C02AAC07 /* External Frameworks and Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				08EA7FFBFE8413EDC02AAC07 /* Carbon.framework */,
 				D130064E12F02D9700702C0E /* Cocoa.framework */,
 			);
 			name = "External Frameworks and Libraries";
@@ -190,7 +141,6 @@
 		089C167CFE841241C02AAC07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				18B685220694531300CC6A1E /* 4DPlugin.rsrc */,
 				8D01CCD10486CAD60068D4B7 /* Info.plist */,
 				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
 			);
@@ -200,10 +150,9 @@
 		08FB77ADFE841716C02AAC07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				18B684FE06944F8800CC6A1E /* 4DPlugin.cpp */,
-				D120937E13534DCC00A72CAA /* 4DPlugin.h */,
+				18B684FE06944F8800CC6A1E /* 4DPlugin-Discount.cpp */,
+				D120937E13534DCC00A72CAA /* 4DPlugin-Discount.h */,
 				18B684ED06944F2000CC6A1E /* 4D Plugin API */,
-				32BAE0B30371A71500C91783 /* 4D Plugin_Prefix.pch */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -219,8 +168,7 @@
 		18B684ED06944F2000CC6A1E /* 4D Plugin API */ = {
 			isa = PBXGroup;
 			children = (
-				D19CC171135378140004336E /* Classes */,
-				18B684EE06944F2000CC6A1E /* 4DPluginAPI.cpp */,
+				D13116A81A03ACB700DE1322 /* 4DPluginAPI.c */,
 				18B684F006944F2000CC6A1E /* 4DPluginAPI.h */,
 				18B684F106944F2000CC6A1E /* EntryPoints.h */,
 				18B684F206944F2000CC6A1E /* Flags.h */,
@@ -230,75 +178,48 @@
 			path = "4D Plugin API";
 			sourceTree = "<group>";
 		};
-		D19CC171135378140004336E /* Classes */ = {
+		D108BD7A1A03D1E6001F1B90 /* Manifest */ = {
 			isa = PBXGroup;
 			children = (
-				D13E889E13543F3800C1F956 /* ARRAY_REAL.cpp */,
-				D13E889F13543F3800C1F956 /* ARRAY_REAL.h */,
-				D16AC3A8147CB499000AA750 /* ARRAY_BOOLEAN.cpp */,
-				D16AC3A9147CB499000AA750 /* ARRAY_BOOLEAN.h */,
-				D19271A31353D6F2001CEA07 /* ARRAY_TEXT.cpp */,
-				D19271A41353D6F2001CEA07 /* ARRAY_TEXT.h */,
-				D19271A81353D771001CEA07 /* ARRAY_LONGINT.cpp */,
-				D19271A91353D771001CEA07 /* ARRAY_LONGINT.h */,
-				D19271CB1353DE6E001CEA07 /* ARRAY_INTEGER.cpp */,
-				D19271CC1353DE6E001CEA07 /* ARRAY_INTEGER.h */,
-				D1392DD713582171004911A5 /* C_BLOB.cpp */,
-				D1392DD813582171004911A5 /* C_BLOB.h */,
-				D19CC17A1353782E0004336E /* C_REAL.cpp */,
-				D19CC17B1353782E0004336E /* C_REAL.h */,
-				D19CC17C1353782E0004336E /* C_TEXT.cpp */,
-				D19CC17D1353782E0004336E /* C_TEXT.h */,
-				D10DD2C2135FA56100319781 /* C_TIME.cpp */,
-				D10DD2C3135FA56100319781 /* C_TIME.h */,
-				D10DD2E9135FAB2F00319781 /* C_DATE.cpp */,
-				D10DD2EA135FAB2F00319781 /* C_DATE.h */,
-				D1392DD313582164004911A5 /* C_PICTURE.cpp */,
-				D1392DD413582164004911A5 /* C_PICTURE.h */,
-				D19CC1781353782E0004336E /* C_LONGINT.cpp */,
-				D19CC1791353782E0004336E /* C_LONGINT.h */,
-				D19CC1761353782E0004336E /* C_INTEGER.cpp */,
-				D19CC1771353782E0004336E /* C_INTEGER.h */,
+				D134D4A91A030B06008D14EF /* manifest.json */,
+				D14D10DD1A03A8A5008B3411 /* constants.xlf */,
 			);
-			name = Classes;
+			name = Manifest;
 			sourceTree = "<group>";
 		};
-		D1F05DCE1811D8B100B6ECDF /* discount */ = {
+		D16FBB3C22A4C07E008F0416 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D1F05DCF1811D8B100B6ECDF /* amalloc.c */,
-				D1F05DD01811D8B100B6ECDF /* amalloc.h */,
-				D1F05DD21811D8B100B6ECDF /* blocktags */,
-				D1F05DD31811D8B100B6ECDF /* config.h */,
-				D1F05DD41811D8B100B6ECDF /* Csio.c */,
-				D1F05DD51811D8B100B6ECDF /* css.c */,
-				D17513901812565600860B9F /* css.h */,
-				D1F05DD61811D8B100B6ECDF /* cstring.h */,
-				D1F05DD71811D8B100B6ECDF /* docheader.c */,
-				D1F05DD81811D8B100B6ECDF /* dumptree.c */,
-				D1F05DD91811D8B100B6ECDF /* emmatch.c */,
-				D1F05DDA1811D8B100B6ECDF /* flags.c */,
-				D1F05DDB1811D8B100B6ECDF /* generate.c */,
-				D1F05DDC1811D8B100B6ECDF /* github_flavoured.c */,
-				D1F05DDD1811D8B100B6ECDF /* html5.c */,
-				D1F05F861811E70F00B6ECDF /* markdown.c */,
-				D1F05DE11811D8B100B6ECDF /* markdown.h */,
-				D1F05DE31811D8B100B6ECDF /* mkdio.c */,
-				D1F05DE41811D8B100B6ECDF /* mkdio.h */,
-				D1F05DE51811D8B100B6ECDF /* mktags.c */,
-				D1F05DE61811D8B100B6ECDF /* pgm_options.c */,
-				D1F05DE71811D8B100B6ECDF /* pgm_options.h */,
-				D1F05DE81811D8B100B6ECDF /* resource.c */,
-				D17511D71812183100860B9F /* resource.h */,
-				D1F05DE91811D8B100B6ECDF /* setup.c */,
-				D1F05DEA1811D8B100B6ECDF /* tags.c */,
-				D1F05DEB1811D8B100B6ECDF /* tags.h */,
-				D1F05DED1811D8B100B6ECDF /* toc.c */,
-				D17513681812556400860B9F /* toc.h */,
-				D1F05DEF1811D8B100B6ECDF /* xml.c */,
-				D1F05DF01811D8B100B6ECDF /* xmlpage.c */,
+				D1C1F73B23A7253C0043810F /* libmarkdown.a */,
 			);
-			path = discount;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D1F2267723A72762009B96D8 /* discount */ = {
+			isa = PBXGroup;
+			children = (
+				D1F2267923A72780009B96D8 /* amalloc.c */,
+				D1F2267C23A72797009B96D8 /* Csio.c */,
+				D1F2267E23A7279B009B96D8 /* css.c */,
+				D1F2268023A727A0009B96D8 /* docheader.c */,
+				D1F2268223A727A5009B96D8 /* dumptree.c */,
+				D1F2268423A727AA009B96D8 /* emmatch.c */,
+				D1F2268623A727AF009B96D8 /* flags.c */,
+				D1F2268823A727B3009B96D8 /* generate.c */,
+				D1F2268A23A727B7009B96D8 /* github_flavoured.c */,
+				D1F2268C23A727BE009B96D8 /* html5.c */,
+				D1F226A023A72817009B96D8 /* markdown.c */,
+				D1F2269023A727C7009B96D8 /* mkdio.c */,
+				D1F2269223A727CC009B96D8 /* pgm_options.c */,
+				D1F2269423A727D0009B96D8 /* resource.c */,
+				D1F2269623A727D5009B96D8 /* setup.c */,
+				D1F2269823A727DA009B96D8 /* tags.c */,
+				D1F2269A23A727E0009B96D8 /* toc.c */,
+				D1F2269C23A727E4009B96D8 /* xml.c */,
+				D1F2269E23A727E9009B96D8 /* xmlpage.c */,
+			);
+			name = discount;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,36 +229,15 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D01CCC80486CAD60068D4B7 /* 4D Plugin_Prefix.pch in Headers */,
 				18B684F706944F2000CC6A1E /* 4DPluginAPI.h in Headers */,
 				18B684F806944F2000CC6A1E /* EntryPoints.h in Headers */,
 				18B684F906944F2000CC6A1E /* Flags.h in Headers */,
 				18B684FA06944F2000CC6A1E /* PrivateTypes.h in Headers */,
+				D1C1F73823A724020043810F /* C_TEXT.h in Headers */,
+				D1C1F73923A724020043810F /* C_TYPES.h in Headers */,
 				18B684FB06944F2000CC6A1E /* PublicTypes.h in Headers */,
-				D120937F13534DCC00A72CAA /* 4DPlugin.h in Headers */,
-				D19CC17F1353782E0004336E /* C_INTEGER.h in Headers */,
-				D19CC1811353782E0004336E /* C_LONGINT.h in Headers */,
-				D19CC1831353782E0004336E /* C_REAL.h in Headers */,
-				D19CC1851353782E0004336E /* C_TEXT.h in Headers */,
-				D19271A61353D6F2001CEA07 /* ARRAY_TEXT.h in Headers */,
-				D19271AB1353D771001CEA07 /* ARRAY_LONGINT.h in Headers */,
-				D19271CE1353DE6E001CEA07 /* ARRAY_INTEGER.h in Headers */,
-				D13E88A113543F3800C1F956 /* ARRAY_REAL.h in Headers */,
-				D1392DD613582164004911A5 /* C_PICTURE.h in Headers */,
-				D1392DDA13582171004911A5 /* C_BLOB.h in Headers */,
-				D10DD2C5135FA56100319781 /* C_TIME.h in Headers */,
-				D10DD2EC135FAB2F00319781 /* C_DATE.h in Headers */,
-				D16AC3AB147CB499000AA750 /* ARRAY_BOOLEAN.h in Headers */,
-				D1F05DF21811D8B100B6ECDF /* amalloc.h in Headers */,
-				D1F05DF51811D8B100B6ECDF /* config.h in Headers */,
-				D1F05DF81811D8B100B6ECDF /* cstring.h in Headers */,
-				D1F05E031811D8B100B6ECDF /* markdown.h in Headers */,
-				D1F05E061811D8B100B6ECDF /* mkdio.h in Headers */,
-				D1F05E091811D8B100B6ECDF /* pgm_options.h in Headers */,
-				D1F05E0D1811D8B100B6ECDF /* tags.h in Headers */,
-				D17511D81812183100860B9F /* resource.h in Headers */,
-				D17513691812556400860B9F /* toc.h in Headers */,
-				D17513911812565600860B9F /* css.h in Headers */,
+				D1C1F73723A724020043810F /* C_LONGINT.h in Headers */,
+				D120937F13534DCC00A72CAA /* 4DPlugin-Discount.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,9 +250,11 @@
 			buildPhases = (
 				8D01CCC70486CAD60068D4B7 /* Headers */,
 				8D01CCC90486CAD60068D4B7 /* Resources */,
+				D134D4AB1A030B7A008D14EF /* CopyFiles */,
 				8D01CCCB0486CAD60068D4B7 /* Sources */,
 				8D01CCCD0486CAD60068D4B7 /* Frameworks */,
 				8D01CCCF0486CAD60068D4B7 /* Rez */,
+				D1292E7B22C4A91E00CB5A8C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -360,7 +262,7 @@
 			);
 			name = Discount;
 			productInstallPath = "$(HOME)/Library/Bundles";
-			productName = "4D Plugin";
+			productName = Discount;
 			productReference = 189286350695AD8900B05D6E /* Discount.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
@@ -369,8 +271,17 @@
 /* Begin PBXProject section */
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				TargetAttributes = {
+					8D01CCC60486CAD60068D4B7 = {
+						DevelopmentTeam = Y69CWUC25B;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
 			buildConfigurationList = 42D60B430A9DDBC8002ABB42 /* Build configuration list for PBXProject "Discount" */;
-			compatibilityVersion = "Xcode 2.4";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -379,7 +290,7 @@
 				French,
 				German,
 			);
-			mainGroup = 089C166AFE841209C02AAC07 /* 4D Plugin */;
+			mainGroup = 089C166AFE841209C02AAC07 /* Discount */;
 			productRefGroup = 189286360695AD8900B05D6E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -405,52 +316,55 @@
 			isa = PBXRezBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18B685230694531300CC6A1E /* 4DPlugin.rsrc in Rez */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXRezBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D1292E7B22C4A91E00CB5A8C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "USER_NAME=keisuke.miyako@4d.com\nUUID=`uuidgen | tr -d - | tr -d '\\n' | tr '[:upper:]' '[:lower:]'`\nDEVELOPER_ID=`security find-identity -p codesigning -v | egrep 'Developer ID Application[^\"]+' -o`\nPRODUCT_PATH=\"$CODESIGNING_FOLDER_PATH\"\nxattr -cr \"$PRODUCT_PATH\"\ncodesign --remove-signature \"$PRODUCT_PATH\"\ncodesign --verbose --deep --timestamp --force --sign \"$DEVELOPER_ID\" \"$PRODUCT_PATH\"\nDMG_PATH=\"$PROJECT_DIR/$PRODUCT_NAME.dmg\"\nZIP_PATH=\"$PROJECT_DIR/$PRODUCT_NAME.zip\"\nrm \"$DMG_PATH\"\nhdiutil create -format UDBZ -plist -srcfolder \"$PRODUCT_PATH\" \"$DMG_PATH\"\necho \"xcrun stapler staple \\\"$PRODUCT_PATH\\\"\"\necho \"hdiutil create -format UDBZ -plist -srcfolder  \\\"$PRODUCT_PATH\\\" \\\"$DMG_PATH\\\" \"\necho \"ditto -c -k --keepParent \\\"$PRODUCT_PATH\\\" \\\"$ZIP_PATH\\\" \"\nxcrun altool --notarize-app --file \"$DMG_PATH\" --username \"$USER_NAME\" --password \"@keychain:altool\" --primary-bundle-id $PRODUCT_BUNDLE_IDENTIFIER.$UUID\nrm -f \"$ZIP_PATH\"\nrm -f \"$DMG_PATH\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D01CCCB0486CAD60068D4B7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18B684F506944F2000CC6A1E /* 4DPluginAPI.cpp in Sources */,
-				18B684FF06944F8800CC6A1E /* 4DPlugin.cpp in Sources */,
-				D19CC17E1353782E0004336E /* C_INTEGER.cpp in Sources */,
-				D19CC1801353782E0004336E /* C_LONGINT.cpp in Sources */,
-				D19CC1821353782E0004336E /* C_REAL.cpp in Sources */,
-				D19CC1841353782E0004336E /* C_TEXT.cpp in Sources */,
-				D19271A51353D6F2001CEA07 /* ARRAY_TEXT.cpp in Sources */,
-				D19271AA1353D771001CEA07 /* ARRAY_LONGINT.cpp in Sources */,
-				D19271CD1353DE6E001CEA07 /* ARRAY_INTEGER.cpp in Sources */,
-				D13E88A013543F3800C1F956 /* ARRAY_REAL.cpp in Sources */,
-				D1392DD513582164004911A5 /* C_PICTURE.cpp in Sources */,
-				D1392DD913582171004911A5 /* C_BLOB.cpp in Sources */,
-				D10DD2C4135FA56100319781 /* C_TIME.cpp in Sources */,
-				D10DD2EB135FAB2F00319781 /* C_DATE.cpp in Sources */,
-				D16AC3AA147CB499000AA750 /* ARRAY_BOOLEAN.cpp in Sources */,
-				D1F05DF11811D8B100B6ECDF /* amalloc.c in Sources */,
-				D1F05DF61811D8B100B6ECDF /* Csio.c in Sources */,
-				D1F05DF71811D8B100B6ECDF /* css.c in Sources */,
-				D1F05DF91811D8B100B6ECDF /* docheader.c in Sources */,
-				D1F05DFA1811D8B100B6ECDF /* dumptree.c in Sources */,
-				D1F05DFB1811D8B100B6ECDF /* emmatch.c in Sources */,
-				D1F05DFC1811D8B100B6ECDF /* flags.c in Sources */,
-				D1F05DFD1811D8B100B6ECDF /* generate.c in Sources */,
-				D1F05DFE1811D8B100B6ECDF /* github_flavoured.c in Sources */,
-				D1F05DFF1811D8B100B6ECDF /* html5.c in Sources */,
-				D1F05E051811D8B100B6ECDF /* mkdio.c in Sources */,
-				D1F05E071811D8B100B6ECDF /* mktags.c in Sources */,
-				D1F05E081811D8B100B6ECDF /* pgm_options.c in Sources */,
-				D1F05E0A1811D8B100B6ECDF /* resource.c in Sources */,
-				D1F05E0B1811D8B100B6ECDF /* setup.c in Sources */,
-				D1F05E0C1811D8B100B6ECDF /* tags.c in Sources */,
-				D1F05E0F1811D8B100B6ECDF /* toc.c in Sources */,
-				D1F05E111811D8B100B6ECDF /* xml.c in Sources */,
-				D1F05E121811D8B100B6ECDF /* xmlpage.c in Sources */,
-				D1F05F871811E70F00B6ECDF /* markdown.c in Sources */,
+				D1F2269F23A727E9009B96D8 /* xmlpage.c in Sources */,
+				D1C1F73623A724020043810F /* C_LONGINT.cpp in Sources */,
+				D1F2268B23A727B7009B96D8 /* github_flavoured.c in Sources */,
+				D1F2267F23A7279B009B96D8 /* css.c in Sources */,
+				D1F2267D23A72797009B96D8 /* Csio.c in Sources */,
+				D1F2269723A727D5009B96D8 /* setup.c in Sources */,
+				D1F2268723A727AF009B96D8 /* flags.c in Sources */,
+				D1F2268123A727A0009B96D8 /* docheader.c in Sources */,
+				D1F2268323A727A5009B96D8 /* dumptree.c in Sources */,
+				18B684FF06944F8800CC6A1E /* 4DPlugin-Discount.cpp in Sources */,
+				D1F2269323A727CC009B96D8 /* pgm_options.c in Sources */,
+				D1F2269923A727DA009B96D8 /* tags.c in Sources */,
+				D1F2269D23A727E4009B96D8 /* xml.c in Sources */,
+				D1C1F73A23A724020043810F /* C_TEXT.cpp in Sources */,
+				D1F2268523A727AA009B96D8 /* emmatch.c in Sources */,
+				D1F226A123A72817009B96D8 /* markdown.c in Sources */,
+				D13116A91A03ACB700DE1322 /* 4DPluginAPI.c in Sources */,
+				D1F2269123A727C8009B96D8 /* mkdio.c in Sources */,
+				D1F2268923A727B3009B96D8 /* generate.c in Sources */,
+				D1F2268D23A727BE009B96D8 /* html5.c in Sources */,
+				D1F2269B23A727E0009B96D8 /* toc.c in Sources */,
+				D1F2267B23A72780009B96D8 /* amalloc.c in Sources */,
+				D1F2269523A727D0009B96D8 /* resource.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,29 +385,48 @@
 		42D60B400A9DDBC8002ABB42 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUGGING_SYMBOLS = YES;
 				DEPLOYMENT_LOCATION = NO;
+				DEVELOPMENT_TEAM = Y69CWUC25B;
 				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_ENABLE_TRIGRAPHS = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "4D Plugin_Prefix.pch";
+				GCC_PREFIX_HEADER = "";
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
 				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
 				GCC_WARN_UNKNOWN_PRAGMAS = NO;
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = (
+					"include/**",
+					discount,
+				);
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
-				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/lib",
+					"$(PROJECT_DIR)/a",
+				);
 				LIBRARY_STYLE = Bundle;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.4D.Discount;
 				PRODUCT_NAME = Discount;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -508,26 +441,45 @@
 		42D60B410A9DDBC8002ABB42 /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEPLOYMENT_LOCATION = NO;
+				DEVELOPMENT_TEAM = Y69CWUC25B;
 				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_ENABLE_TRIGRAPHS = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "4D Plugin_Prefix.pch";
+				GCC_PREFIX_HEADER = "";
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
 				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
 				GCC_WARN_UNKNOWN_PRAGMAS = NO;
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = (
+					"include/**",
+					discount,
+				);
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
-				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/lib",
+					"$(PROJECT_DIR)/a",
+				);
 				LIBRARY_STYLE = Bundle;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.4D.Discount;
 				PRODUCT_NAME = Discount;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -542,24 +494,43 @@
 		42D60B420A9DDBC8002ABB42 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_LOCATION = NO;
+				DEVELOPMENT_TEAM = Y69CWUC25B;
 				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_ENABLE_TRIGRAPHS = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "4D Plugin_Prefix.pch";
+				GCC_PREFIX_HEADER = "";
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
 				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
 				GCC_WARN_UNKNOWN_PRAGMAS = NO;
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = (
+					"include/**",
+					discount,
+				);
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
-				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/lib",
+					"$(PROJECT_DIR)/a",
+				);
 				LIBRARY_STYLE = Bundle;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.4D.Discount;
 				PRODUCT_NAME = Discount;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -573,52 +544,134 @@
 		42D60B440A9DDBC8002ABB42 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
+				DEVELOPMENT_TEAM = Y69CWUC25B;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GCC_VERSION = "";
-				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
-				HEADER_SEARCH_PATHS = discount;
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OBJROOT = "$(SRCROOT)/build";
-				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
-				SYMROOT = "$(SRCROOT)/Discount.4dbase/Plugins";
+				SDKROOT = macosx;
+				SYMROOT = "$(SRCROOT)/test/Plugins";
 			};
 			name = Development;
 		};
 		42D60B450A9DDBC8002ABB42 /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
+				DEVELOPMENT_TEAM = Y69CWUC25B;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GCC_VERSION = "";
-				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
-				HEADER_SEARCH_PATHS = discount;
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OBJROOT = "$(SRCROOT)/build";
-				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
-				SYMROOT = "$(SRCROOT)/Discount.4dbase/Plugins";
+				SDKROOT = macosx;
+				SYMROOT = "$(SRCROOT)/test/Plugins";
 			};
 			name = Deployment;
 		};
 		42D60B460A9DDBC8002ABB42 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
+				DEVELOPMENT_TEAM = Y69CWUC25B;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GCC_VERSION = "";
-				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
-				HEADER_SEARCH_PATHS = discount;
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
-				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
-				SYMROOT = "$(SRCROOT)/Discount.4dbase/Plugins";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+				SYMROOT = "$(SRCROOT)/test/Plugins";
 			};
 			name = Default;
 		};
