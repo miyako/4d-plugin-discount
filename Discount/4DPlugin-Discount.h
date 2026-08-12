@@ -27,6 +27,7 @@ void Markdown(PA_PluginParameters params);
 
 #include <iostream>
 #include <sstream>
+#include <mutex>
 
 #define MKD_GITHUB_FLAVOURED 1
 #define MKD_WITH_HTML5_TAGS 2

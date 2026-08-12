@@ -50,43 +50,72 @@ void Markdown(PA_PluginParameters params) {
     Param3.fromParamAtIndex(pParams, 3);
     Param4.fromParamAtIndex(pParams, 4);
 
-    CUTF8String src;
-    Param1.copyUTF8String(&src);
-    
-    mkd_flag_t flags;
-    flags = (mkd_flag_t)Param3.getIntValue();
-    
-    if(MKD_WITH_HTML5_TAGS && Param4.getIntValue())
-        mkd_with_html5_tags();
-    
-    Document *doc;
-    
-    if(MKD_GITHUB_FLAVOURED && Param4.getIntValue()) {
-        doc = gfm_string((const char *)src.c_str(), src.length(), flags);
-    }else{
-        doc = mkd_string((const char *)src.c_str(), src.length(), flags);
-    }
-    
-    if(doc) {
-    
-        if(mkd_compile(doc, flags)) {
-            
-            std::ostringstream outstream;
-            
-            mkd_generatecss(doc, outstream);
-            mkd_generatetoc(doc, outstream);
-            mkd_generatehtml(doc, outstream);
-            
-            std::string dst = outstream.str();
-            Param2.setUTF8String((const uint8_t *)dst.c_str(), dst.length());
-            
+    // Discount's block-tag table (tags.c: `extratags`) is process-wide global
+    // state with no internal locking: mkd_with_html5_tags()/mkd_define_tag()
+    // and mkd_deallocate_tags() all read/mutate the same global array.
+    // manifest.json declares this command threadSafe, so concurrent calls
+    // could otherwise race on that shared table (one call deallocating it
+    // while another is still mid-compile using it). Serialize the whole
+    // Discount interaction so the threadSafe claim is actually safe.
+    static std::mutex sDiscountLock;
+    std::lock_guard<std::mutex> lock(sDiscountLock);
+
+    try
+    {
+        CUTF8String src;
+        Param1.copyUTF8String(&src);
+
+        mkd_flag_t flags;
+        flags = (mkd_flag_t)Param3.getIntValue();
+
+        int optionFlags = Param4.getIntValue();
+
+        // Was: `MKD_WITH_HTML5_TAGS && Param4.getIntValue()` / `MKD_GITHUB_FLAVOURED && Param4.getIntValue()`.
+        // Both macros are non-zero constants, so both conditions collapsed to
+        // plain "Param4 != 0" and could never be selected independently -
+        // any non-zero Param4 turned on BOTH options together. Fixed to a
+        // real bitmask test so each flag is independently selectable.
+        if(optionFlags & MKD_WITH_HTML5_TAGS)
+            mkd_with_html5_tags();
+
+        Document *doc;
+
+        if(optionFlags & MKD_GITHUB_FLAVOURED) {
+            doc = gfm_string((const char *)src.c_str(), src.length(), flags);
+        }else{
+            doc = mkd_string((const char *)src.c_str(), src.length(), flags);
+        }
+
+        if(doc) {
+
+            if(mkd_compile(doc, flags)) {
+
+                std::ostringstream outstream;
+
+                mkd_generatecss(doc, outstream);
+                mkd_generatetoc(doc, outstream);
+                mkd_generatehtml(doc, outstream);
+
+                std::string dst = outstream.str();
+                Param2.setUTF8String((const uint8_t *)dst.c_str(), dst.length());
+
+            }else{returnValue.setIntValue(errno);}
+
+            mkd_cleanup(doc);
+
         }else{returnValue.setIntValue(errno);}
-        
-        mkd_cleanup(doc);
-        
-    }else{returnValue.setIntValue(errno);}
-    
-    mkd_deallocate_tags();
+
+        mkd_deallocate_tags();
+    }
+    catch(...)
+    {
+        // Guarantee the host still gets its declared return value
+        // (manifest syntax ends in ":L") even if something above throws
+        // (e.g. std::bad_alloc on a very large document) - otherwise 4D is
+        // left waiting on a return that never arrives, i.e. a freeze rather
+        // than a caught, reported error.
+        returnValue.setIntValue(-1);
+    }
 
     Param2.toParamAtIndex(pParams, 2);
     returnValue.setReturn(pResult);
