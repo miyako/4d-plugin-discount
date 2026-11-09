@@ -13,6 +13,124 @@ Discount converts Markdown text to HTML inside 4D, using the Discount C library 
 
 **Platforms:** macOS, Windows
 
+## Manual versioning and publication
+
+The Actions workflows are independent manual operations:
+
+- **Bump version**: select a branch and `patch`, `minor`, or `major`. It validates
+  source metadata, creates one metadata-only commit with the Copilot co-author
+  trailer, and pushes only that branch. It never tags, builds, releases, or
+  dispatches another workflow.
+- **Build**: select a branch using GitHub's built-in selector; there are **zero
+  custom inputs**. Every job checks out the selected immutable `github.sha`.
+  The source version determines `vX.Y.Z`, `Discount-X.Y.Z.zip`, and
+  `Discount-X.Y.Z.dmg`. Build does not bump source metadata.
+
+### Version authority
+
+`Discount.xcodeproj/project.pbxproj` contains six assignments each for
+`MARKETING_VERSION` and `CURRENT_PROJECT_VERSION`. The committed Bump header at
+`4157b5fd8f443da399cbd7599be415ca9e1fd3b3` explicitly coordinates **both** keys
+and Info.plist's `CFBundleShortVersionString`/`CFBundleVersion`; this is the
+authority, despite that workflow body's marketing-first implementation.
+The earlier header at `a33eda9adbd93ef46d2f37b4bd0caffcea4e0ba5` specified
+marketing-first/fallback behavior, but the later explicit coordinated header
+supersedes it. Equality of fields alone is not evidence of coordination.
+
+This migration retains the existing `1.0.4` marketing/plist authority, repairing
+only the stale source build values (`1.0.1`) and source English display strings
+(`2.0`). **It does not increment the version.** The absent optional
+`CFBundleVersion` remains absent. Subsequent bumps coordinate existing literals,
+preserving supported `$(MARKETING_VERSION)`, `${MARKETING_VERSION}`,
+`$(CURRENT_PROJECT_VERSION)`, and `${CURRENT_PROJECT_VERSION}` references.
+Build versions may reference marketing, never themselves or unknown variables.
+Versions must be strict `X.Y.Z`, with no leading zeroes, suffixes, drift, or
+duplicate assignments, including quoted or same-line duplicates.
+
+Only the project, `Info.plist`, and `English.lproj/InfoPlist.strings` are version
+inputs. Rewrites preserve BOMs, every CR/LF/CRLF (including mixed endings),
+permissions, references, and unrelated bytes. Vendored Discount/library versions,
+4D schema/localization counters, and prebuilt `test/Plugins` files are excluded.
+In particular, destination English strings remain untouched by migration/Bump.
+
+Bump requires a clean checkout and the selected branch still at the dispatch
+SHA. Its mandatory executable pre-push hook checks Git's actual advertised old
+SHA and exact destination ref, literal new commit SHA/HEAD, one direct parent,
+and exactly one update. It rejects advance, rewind, deletion, and same-result
+races; it never force-pushes or follows tags, even with `push.followTags=true`.
+A rejected preparation may leave a local commit in the runner, but pushes no
+replacement branch or release.
+
+### Native pipeline and publication safety
+
+The original Windows Release/x64 MSBuild v143/SDK 10.0 override is retained;
+the project itself still declares v140. Its actual output is
+`test/plugins/Discount.bundle/contents/windows64/Discount.4DX`, normalized to
+the canonical `test/Plugins/Discount.bundle/Contents/Windows64/Discount.4DX`.
+Only that rebuilt file is uploaded and only `winbuild/Discount.4DX` is merged.
+Recursive first-match searches are not used.
+
+macOS retains Xcode's Default target configuration, `arm64 x86_64`,
+`ONLY_ACTIVE_ARCH=NO`, deployment override `11.0`, and disabled automatic code
+signing, followed by the original Developer ID signing/strict verification and
+ZIP/DMG packaging. The original project frameworks, library settings, resource
+phases, legacy shell phase, and deployment settings remain unchanged.
+`InfoPlist.strings` is an actual Resources phase input; `manifest.json` and
+`constants.xlf` are actual CopyFiles inputs (`dstSubfolderSpec = 7`).
+Freshness cleanup invalidates only the exact rebuilt binary, plist, English
+strings, signature, and existing intermediate outputs. It preserves committed
+QuickLook/resources/dependencies and Windows content; deletion errors abort.
+The rebuilt binary must contain the exact `arm64` and `x86_64` tokens, not
+`arm64e`/`x86_64h` substitutes. No new i386 or exact-slice-count restriction is
+invented. Rebuilt plist and localized versions are checked against selected
+source, including UTF-16 and compiled binary/XML localization.
+
+Both notary submissions must exit successfully **and** report JSON status
+`Accepted`; staple must also succeed. Existing signing/notary secret **names**
+are unchanged. No secret values belong in this repository.
+
+Publication uses one constant cross-branch concurrency group with cancellation
+disabled. Before native work, and again after all build/sign/notary/staple gates,
+it checks exact tag absence and authenticated, fully paginated release lists,
+including drafts. Authentication/network errors, API 404, malformed responses,
+and later-page failures abort, never count as absence.
+Publication then performs a create-only `POST git/refs` at the selected SHA,
+verifies the remote tag, separately POSTs a **new public, non-prerelease**
+release with explicit tag/name/target/body/draft flags (the original empty
+release body is preserved), and uploads assets only to that response's new
+release ID. It never reuses, patches, deletes, clobbers, rolls back, or retries
+partial state.
+
+**Recovery:** inspect the failing run and exact remote tag SHA, draft/public
+releases, release ID, and uploaded assets manually. Any tag, release, or earlier
+asset created before failure is deliberately retained. Do not rerun expecting
+repair or overwrite: an existing tag or release blocks publication, even at the
+same SHA. Resolve retained state through a separately authorized manual recovery,
+or bump source on the intended branch and publish a new version. A Bump race
+requires a fresh dispatch against the current branch; do not force-push.
+
+### Offline checks and pinned prior art
+
+Run `actionlint` and
+`PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s .github/tests -v`.
+The full suite also runs in a disposable Git/bare-origin copy after a genuine
+guarded helper bump. Fixtures derive versions from source, exercise real local
+Git races, and run literal workflow blocks with closed-PATH native/PowerShell
+stubs only; they never build, sign, notarize, run 4D, or call production
+publication APIs. PowerShell (`pwsh`) is required to exercise Windows shell tests.
+
+The workflows, helpers, hooks, and tests were inspected at these exact commits,
+not moving branch tips, and adapted to Discount's actual paths/counts/policy:
+
+| Repository | Pinned commit |
+|---|---|
+| [Native Encoding Detection](https://github.com/miyako/4d-plugin-native-encoding-detection/tree/c42ca565857f674bde5ea6ed3435c87375eda4a7) | `c42ca565857f674bde5ea6ed3435c87375eda4a7` |
+| [File Information](https://github.com/miyako/4d-plugin-file-information/tree/19848973601acfd3a2b5070230fa40cdc7e4edb2) | `19848973601acfd3a2b5070230fa40cdc7e4edb2` |
+| [Common String Algorithm](https://github.com/miyako/4d-plugin-common-string-algorithm/tree/2606a68201866ec9fcbb38b51462d79215f504ef) | `2606a68201866ec9fcbb38b51462d79215f504ef` |
+| [Window Button](https://github.com/miyako/4d-plugin-window-button/tree/3f14facb9aaaaff0e22eeb8e07531163680c3a8a) | `3f14facb9aaaaff0e22eeb8e07531163680c3a8a` |
+| [RAW Picture Data](https://github.com/miyako/4d-plugin-raw-picture-data/tree/8144537fdc8dcc3d0c053dfe97aff0a8c0c3a6f9) | `8144537fdc8dcc3d0c053dfe97aff0a8c0c3a6f9` |
+| [PRNG](https://github.com/miyako/4d-plugin-PRNG/tree/522f62e1e9f388be0f3f226c1d4c39362dad2491) | `522f62e1e9f388be0f3f226c1d4c39362dad2491` |
+
 ---
 
 ## Requirements & platform notes
