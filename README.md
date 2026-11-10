@@ -116,8 +116,9 @@ Run `actionlint` and
 The full suite also runs in a disposable Git/bare-origin copy after a genuine
 guarded helper bump. Fixtures derive versions from source, exercise real local
 Git races, and run literal workflow blocks with closed-PATH native/PowerShell
-stubs only; they never build, sign, notarize, run 4D, or call production
-publication APIs. PowerShell (`pwsh`) is required to exercise Windows shell tests.
+stubs only; those workflow tests never build, sign, notarize, run 4D, or call
+production publication APIs. The separate ownership tests below compile native
+sources directly. PowerShell (`pwsh`) is required to exercise Windows shell tests.
 
 The workflows, helpers, hooks, and tests were inspected at these exact commits,
 not moving branch tips, and adapted to Discount's actual paths/counts/policy:
@@ -130,6 +131,81 @@ not moving branch tips, and adapted to Discount's actual paths/counts/policy:
 | [Window Button](https://github.com/miyako/4d-plugin-window-button/tree/3f14facb9aaaaff0e22eeb8e07531163680c3a8a) | `3f14facb9aaaaff0e22eeb8e07531163680c3a8a` |
 | [RAW Picture Data](https://github.com/miyako/4d-plugin-raw-picture-data/tree/8144537fdc8dcc3d0c053dfe97aff0a8c0c3a6f9) | `8144537fdc8dcc3d0c053dfe97aff0a8c0c3a6f9` |
 | [PRNG](https://github.com/miyako/4d-plugin-PRNG/tree/522f62e1e9f388be0f3f226c1d4c39362dad2491) | `522f62e1e9f388be0f3f226c1d4c39362dad2491` |
+
+---
+
+## Native ownership audit
+
+The bounded audit baseline is `19d8776c80e24d9bf52f15682a0965c2318bc852`.
+Both source and committed bundle manifests declare only
+`Markdown(&T;&T;&L;&L):L`; `PluginMain` dispatches selector 1 to `Markdown`.
+Both native projects compile the entry point, `C_TEXT`, `C_LONGINT`, the
+bundled SDK, and their listed Discount library sources. `C_TEXT` copies its
+borrowed input into a C++ string and writes output with `PA_SetUnistring`.
+`ARRAY_TEXT`, `C_BLOB`, and `support/4DPlugin-JSON` are tracked dormant helpers,
+not compiled or included by either project's first-party entry/wrapper graph.
+Their implementations and headers were included in the inventory; there is
+no first-party CPicture or C_POINTER wrapper in this repository. Vendored
+Discount, JsonCpp, and SDK internals are excluded from fixes.
+
+The actual bundled `4DPluginAPI.c` was introduced by
+`8e827e6b7602f79d7e0d3ff2f1269e7284d09d41`, with SHA-256
+`5bac571c5c4cafd280fa7f23d775458a23701287e8735be27d4a2190002f4e3f`.
+Its v14 comment and the headers' v13 comments are not verified upstream
+release identities. The audit follows the canonical
+[4dplugin skill at e6b492f](https://github.com/miyako/skills/blob/e6b492fcb81e5e1a7f7db723594b420e63bf6eb9/4d-skills/skills/4dplugin/SKILL.md).
+
+Verified SDK source contracts:
+
+- `PA_SetStringInArray` disposes the prior element and shallow-transfers the
+  supplied descriptor only for Unicode arrays with non-null data, index
+  `0..fNbElements`, and a non-null descriptor pointer. Rejections retain caller
+  ownership. `PA_GetStringInArray` returns a borrowed descriptor; `ARRAY_TEXT`
+  copies those contents and creates independent strings for transferred output.
+- `PA_SetStringVariable` shallow-assigns without clearing the previous value.
+  The dormant JSON setters now start overwritten string/picture temporaries
+  as Undefined, avoiding loss of the SDK-created initial empty allocation.
+- `PA_GetObjectProperty` and `PA_GetCollectionElement` explicitly return owning
+  variables to clear after use. JSON scalar getters now copy then clear every
+  successful result, including type mismatches. `ob_get_c` transfers a successful
+  collection owner to its caller, which must call `PA_DisposeCollection`.
+  Lookup errors throw `std::runtime_error`; failed outputs are not inspected
+  or cleared. A scoped owner also handles C++ exceptions during scalar copying.
+- `PA_ReturnString` delegates to the engine-backed content setter
+  `PA_SetUnistring`, not the array descriptor-transfer implementation.
+  There are no first-party synchronous method callbacks, JSON Parse calls,
+  pointer-value getters, or collection-element consumers in this inventory.
+
+On macOS, run:
+
+```sh
+PYTHONDONTWRITEBYTECODE=1 python3 .github/tests/test_ownership.py -v
+PYTHONDONTWRITEBYTECODE=1 python3 .github/tests/test_ownership.py --baseline 19d8776c80e24d9bf52f15682a0965c2318bc852 -v
+```
+
+The second command is an intentional negative control: the same final harness
+must fail on initial string/picture owner leaks, owning getter-result leaks,
+and unreported failed property lookups. Dispatcher and normal array-contract
+tests pass unchanged on that baseline. Tests compile actual entry/helper sources,
+the complete unchanged SDK, and the project's actual Discount source list;
+only the 4D engine callback is shimmed. They use ASan/UBSan, exact ASCII/BMP/
+surrogate-pair/empty fixtures, allocated and null empties, replacement/shrink/
+clear/rejections, copied borrowed inputs, independent transferred outputs, and
+explicit string/handle/picture/reference balances (macOS LSan is unavailable).
+The test-only engine models string identity conversion, property copies/retains,
+and content setters; this does not verify a real 4D engine implementation.
+One legacy SDK C pointer-to-integer initialization diagnostic is suppressed
+without editing the SDK.
+
+The unsigned `Native ownership` CI runs these checks without project build
+phases, signing, packaging, uploads, tags, or releases. Existing manual workflows
+remain unchanged. Do not run the Xcode target for validation: its legacy shell
+phase invokes signing/notarization even outside Deployment.
+Normal array tests do not certify the SDK's resize-allocation-failure count
+handling; that unrelated SDK/OOM issue is deferred. SDK-only application-path,
+picture-data output, and pointer metadata ownership are not guessed.
+No actual 4D host or Windows execution is certified by these tests, and dormant
+helper fixes do not alter the exported Markdown command or committed binaries.
 
 ---
 
