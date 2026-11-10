@@ -1,0 +1,41 @@
+name: Native ownership
+
+on:
+  pull_request:
+  push:
+    branches: [master]
+
+permissions:
+  contents: read
+
+jobs:
+  ownership:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Native and offline regressions
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: python3 -m unittest discover -s .github/tests -v
+      - name: Immutable baseline must fail on named ownership defects
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: |
+          set -euo pipefail
+          log="$RUNNER_TEMP/ownership-baseline.log"
+          if python3 .github/tests/test_ownership.py \
+              --baseline 19d8776c80e24d9bf52f15682a0965c2318bc852 -v >"$log" 2>&1; then
+            cat "$log"
+            echo "Baseline unexpectedly passed"
+            exit 1
+          fi
+          cat "$log"
+          for defect in \
+            "string setter leaked initial owner" \
+            "owning picture leak" \
+            "string getter leaked owning result" \
+            "failed property getter was not reported"; do
+            grep -F "$defect" "$log"
+          done

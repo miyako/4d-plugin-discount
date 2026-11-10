@@ -103,9 +103,12 @@ void ob_set_b(PA_ObjectRef obj, const wchar_t *_key, bool value);
 void ob_set_0(PA_ObjectRef obj, const wchar_t *_key);
 void ob_set_0(PA_ObjectRef obj, const char *_key);
 bool ob_is_defined(PA_ObjectRef obj, const wchar_t *_key);
+// Getters throw std::runtime_error on SDK lookup failure; missing/type-mismatched
+// values retain their existing defaults. Successful scalar results are copied.
 bool ob_get_a(PA_ObjectRef obj, const wchar_t *_key, CUTF8String *value);
 bool ob_get_b(PA_ObjectRef obj, const wchar_t *_key);
 double ob_get_n(PA_ObjectRef obj, const wchar_t *_key);
+// An owning collection handoff: release a non-null result with PA_DisposeCollection.
 PA_CollectionRef ob_get_c(PA_ObjectRef obj, const wchar_t *_key);
 
 void ob_stringify(PA_ObjectRef obj, CUTF8String *value);
